@@ -1,10 +1,29 @@
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px #fff;
+    }
+    50% {
+        box-shadow: 0 0 30px #eee;
+    }
+    100% {
+        box-shadow: 0 0 10px #fff;
+    }
+}
+body{
+    background-image: radial-gradient(red, orange, yellow, green, blue, violet, purple);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 /* The code below centers the text of all h1's on the page. */
 h1 {
     text-align:center;
 }
 
 /* The code below centers all images on the page and gives them a width of 400px. */
-img {
+img,
+iframe {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -20,10 +39,15 @@ h2 {
 .section-container {
     display:flex;
     justify-content:space-between;
+    color: white;
+    flex-wrap: wrap;
 }
-
+.section:hover{
+    animation: pulseGlow 3s infinite;
+}
 /* The code below a solid black border to section and puts space between them (the margin). */
 .section {
     border: 5px black solid;
     margin:5px;
+    max-width: 500px;
 }
